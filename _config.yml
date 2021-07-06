@@ -29,3 +29,6 @@ social:
 exclude:
   - Gemfile
   - Gemfile.lock
+
+plugins:
+  - jekyll-avatar
