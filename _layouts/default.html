@@ -1,44 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	{% include head.html %}
-</head>
-<body>
-	<header>
-		<div>
-			<h1><i>{{ site.icon }}</i> {{ site.first_name }} {{ site.last_name }}</h1>{% if site.job_title %} <h2>{{ site.job_title }}</h2>{% endif %}
-		</div>
+	<head>
+		{% include head.html %}
+	</head>
+	<body>
+		{% include header.html %}
 
-		<nav>
-			<ul>
-				{% assign sorted_pages = site.pages | sort: "sort_title" %}
-				{% for p in sorted_pages %}
-					{% if p.title %}
-						<li class="{% if page.title == p.title %}active{% endif %}"><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
-					{% endif %}
-				{% endfor %}
-			</ul>
-		</nav>
-	</header>
+		<main>
+			{{ content }}
+		</main>
 
-	<main>
-		{{ content }}
-	</main>
+		{% include footer.html %}
 
-	<footer>
-		<div class="copyright">
-			&copy; {{ site.time | date: "%Y" }} by {{ site.first_name }} {{ site.last_name }}.
-		</div>
-
-		<div class="links">
-			<p>Contact</p>
-			<ul>
-				{% for s in site.social %}
-					<li><a href="{{ s.url }}" title="{{ s.name }}"><i class="{{ s.icon }}"></i></a></li>
-				{% endfor %}
-			</ul>
-		</div>
-	</footer>
-
-</body>
+	</body>
 </html>
