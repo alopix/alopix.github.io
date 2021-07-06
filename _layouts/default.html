@@ -1,15 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{{ site.title }}{% if page.title %} | {{ page.title }}{% endif %}</title>
-
-	<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}"/>
-	<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}"/>
-	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css"/>
-	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/brands.min.css"/>
-	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/solid.min.css"/>
+	{% include head.html %}
 </head>
 <body>
 	<header>
@@ -22,7 +14,7 @@
 				{% assign sorted_pages = site.pages | sort: "sort_title" %}
 				{% for p in sorted_pages %}
 					{% if p.title %}
-						<li class="{% if page.title == p.title %}active{% endif %}""><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+						<li class="{% if page.title == p.title %}active{% endif %}"><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
 					{% endif %}
 				{% endfor %}
 			</ul>
