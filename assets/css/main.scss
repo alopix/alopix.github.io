@@ -2,6 +2,26 @@
 ---
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300&display=swap');
 
+:root {
+	--background-color: #efefef;
+	--foreground-color: #333333;
+	--light-accent-color: #66b2b2;
+	--dark-accent-color: #004c4c;
+	--light-accent-background-color: rgb(202, 240, 240);
+	--dark-accent-background-color: #b2d8d8;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background-color: #333333;
+		--foreground-color: #efefef;
+		--light-accent-color: rgb(202, 240, 240);
+		--dark-accent-color: #b2d8d8;
+		--light-accent-background-color: #66b2b2;
+		--dark-accent-background-color: #004c4c;
+	}
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -13,13 +33,15 @@ body {
 	min-height: 100vh;
 	display: grid;
 	grid-template-rows: auto 1fr auto;
+	background-color: var(--background-color);
+	color: var(--foreground-color);
 }
 
 a {
-	color: #004c4c;
+	color: var(--dark-accent-color);
 
 	&:hover {
-		color: #66b2b2;
+		color: var(--light-accent-color);
 	}
 }
 
@@ -31,7 +53,12 @@ header {
 	justify-content: space-between;
 	align-items: center;
 
-	div {
+	.title {
+		a {
+			color: var(--foreground-color);
+			text-decoration: none;
+		}
+
 		h1 {
 			font-size: 1.8em;
 			font-weight: bold;
@@ -74,7 +101,7 @@ header {
 }
 
 main {
-	background-color: #b2d8d8;
+	background-color: var(--dark-accent-background-color);
 	
 	.home {
 		position: relative;
@@ -86,7 +113,7 @@ main {
 			top: 0;
 			right: 0;
 			bottom: 0;
-			background-color: #ffffff;
+			background-color: var(--background-color);
 			width: 60%;
 		}
 
@@ -101,7 +128,7 @@ main {
 
 		.card {
 			box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.25);
-			background-color: rgb(202, 240, 240);
+			background-color: var(--light-accent-background-color);
 			margin: 32px;
 			display: flex;
 			flex-direction: column;
@@ -134,7 +161,7 @@ main {
 					height: 2px;
 					width: 50px;
 					transform: rotateZ(165deg);
-					background-color: #004c4c;
+					background-color: var(--dark-accent-color);
 					margin: 0 auto;
 					margin-top: 0.25em;
 					margin-bottom: 1em;
@@ -147,7 +174,7 @@ main {
 				font-size: 1.4em;
 				position: absolute;
 				bottom: 0;
-				background-color: #ffffff;
+				background-color: var(--background-color);
 				width: 100%;
 				padding: 0.25em 0;
 				justify-content: center;
@@ -162,6 +189,7 @@ main {
 			height: 100%;
 			margin: 32px 0;
 			padding: 0.25em 0;
+			color: var(--foreground-color);
 
 			h1 {
 				font-size: 6em;
@@ -203,7 +231,7 @@ footer {
 	align-items: center;
 
 	a {
-		color: #333333;
+		color: var(--dark-accent-color);
 	}
 
 	.links {
