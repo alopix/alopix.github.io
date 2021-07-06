@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{ site.title }}{% if page.title %} | {{ page.title }}{% endif %}</title>
+
+	<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}"/>
+	<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}"/>
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css"/>
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/brands.min.css"/>
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/solid.min.css"/>
+</head>
+<body>
+	<header>
+		<div>
+			<h1><i>{{ site.icon }}</i> {{ site.first_name }} {{ site.last_name }}</h1>{% if site.job_title %} <h2>{{ site.job_title }}</h2>{% endif %}
+		</div>
+
+		<nav>
+			<ul>
+				{% assign sorted_pages = site.pages | sort: "sort_title" %}
+				{% for p in sorted_pages %}
+					{% if p.title %}
+						<li class="{% if page.title == p.title %}active{% endif %}""><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		{{ content }}
+	</main>
+
+	<footer>
+		<div class="copyright">
+			&copy; {{ site.time | date: "%Y" }} by {{ site.first_name }} {{ site.last_name }}.
+		</div>
+
+		<div class="links">
+			<p>Contact</p>
+			<ul>
+				{% for s in site.social %}
+					<li><a href="{{ s.url }}" title="{{ s.name }}"><i class="{{ s.icon }}"></i></a></li>
+				{% endfor %}
+			</ul>
+		</div>
+	</footer>
+
+</body>
+</html>

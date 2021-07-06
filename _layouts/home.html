@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<div class="home">
+	<div class="wrapper">
+		<div class="card">
+			{% avatar alopix size=175 %}
+
+			<p class="name">
+				{{ site.first_name }}<br/>
+				{{ site.last_name }}
+			</p>
+
+			<p class="job">{{ site.job_title }}</p>
+
+			<ul class="contact">
+				{% for s in site.social %}
+					<li><a href="{{ s.url }}" title="{{ s.name }}"><i class="{{ s.icon }}"></i></a></li>
+				{% endfor %}
+			</ul>
+		</div>
+
+		<div class="content">
+			{{ content }}
+		</div>
+	</div>
+</div>
