@@ -25,6 +25,11 @@ social:
     icon: fab fa-linkedin-in
     url: https://www.linkedin.com/in/dustin-steiner
 
+collections:
+  - resume
+  - projects
+  - books
+
 # Exclude from processing.
 exclude:
   - Gemfile
