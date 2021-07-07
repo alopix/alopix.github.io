@@ -4,13 +4,19 @@
 	</div>
 
 	<nav>
-		<ul>
-			{% assign sorted_pages = site.pages | sort: "sort_title" %}
-			{% for p in sorted_pages %}
-				{% if p.title %}
-					<li class="{% if page.title == p.title %}active{% endif %}"><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
-				{% endif %}
-			{% endfor %}
-		</ul>
+		<input type="checkbox" id="menu-toggle" />
+		<label for="menu-toggle" class="menu-button">
+			<span></span>
+		</label>
+		<div class="menu">
+			<ul>
+				{% assign sorted_pages = site.pages | sort: "sort_title" %}
+				{% for p in sorted_pages %}
+					{% if p.title %}
+						<li class="{% if page.title == p.title %}active{% endif %}"><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+		</div>
 	</nav>
 </header>

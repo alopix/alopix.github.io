@@ -1,0 +1,140 @@
+---
+---
+@import 'colours';
+
+main {
+	.home {
+		position: relative;
+
+		@include sm {
+			height: 100%;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				background-color: var(--background-color);
+				width: 60%;
+			}
+		}
+
+		.wrapper {
+			padding: 1.5em 1em;
+
+			@include sm {
+				margin: 0 auto;
+				padding: 4em 0;
+				display: grid;
+				grid-template-columns: auto auto;
+				position: relative;
+				justify-content: center;
+			}
+
+			.card {
+				box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.25);
+				background-color: var(--light-accent-background-color);
+				display: grid;
+				align-items: center;
+				padding-top: 1.5em;
+				max-width: 512px;
+
+				@include sm {
+					padding-top: 2.5em;
+					margin: 32px;
+				}
+
+				.avatar {
+					margin: 0 auto;
+					width: 15em;
+					height: 15em;
+					margin-bottom: 2em;
+					border-radius: 50%;
+					box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.25);
+
+					@include sm {
+						width: 12em;
+						height: 12em;
+					}
+				}
+
+				.name {
+					font-weight: bold;
+					font-size: 1.5em;
+					text-align: center;
+
+					@include sm {
+						padding: 0 2em;
+					}
+				}
+
+				.job {
+					text-transform: uppercase;
+					letter-spacing: 0.15em;
+					text-align: center;
+
+					@include sm {
+						padding: 0 2em;
+					}
+	
+					&::before {
+						display: block;
+						content: '';
+						height: 2px;
+						width: 50px;
+						transform: rotateZ(165deg);
+						background-color: var(--dark-accent-color);
+						margin: 0 auto;
+						margin-top: 0.25em;
+						margin-bottom: 1em;
+					}
+				}
+
+				.contact {
+					list-style: none;
+					display: flex;
+					font-size: 1.4em;
+					background-color: var(--background-color);
+					width: 100%;
+					padding: 0.25em 0;
+					justify-content: center;
+					margin-top: 0.5em;
+
+					a {
+						color: var(--foreground-color);
+
+						&:hover {
+							color: var(--light-accent-background-color);
+						}
+					}
+	
+					li:not(:last-child) {
+						margin-right: 1em;
+					}
+				}
+			}
+
+			.content {
+				margin: 32px 0;
+				padding: 0.25em 0;
+				color: var(--foreground-color);
+
+				h1 {
+					font-size: 6em;
+					font-weight: 600;
+				}
+	
+				h2 {
+					font-size: 1.75em;
+					font-weight: normal;
+					margin-bottom: 1em;
+				}
+	
+				p:not(:last-child) {
+					margin-bottom: 1em;
+				}
+			}
+		}
+	}
+}
