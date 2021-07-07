@@ -12,6 +12,10 @@ main {
 			padding: 2em 0;
 		}
 
+		@include xl {
+			width: 45%;
+		}
+
 		h3 {
 			font-size: 1.5em;
 			font-weight: bold;
@@ -21,6 +25,11 @@ main {
 			@include sm {
 				font-size: 2em;
 			}
+		}
+
+		.description {
+			text-align: center;
+			padding: 0 2em;
 		}
 	}
 }

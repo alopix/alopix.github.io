@@ -4,4 +4,6 @@ title: Projects
 sort_title: C
 ---
 
-Coming soon-ish 👨‍💻
+<p class="description">
+	Coming soon-ish 👨‍💻
+</p>
