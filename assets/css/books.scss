@@ -1,6 +1,7 @@
 ---
 ---
 @import 'colours';
+@import 'mixins';
 
 .items-list {
 	list-style: none;
@@ -15,8 +16,7 @@
 		grid-template-columns: 1fr auto;
 		grid-template-rows: auto 1fr;
 		align-items: flex-start;
-		row-gap: 1.5em;
-		height: 350px;
+		row-gap: 1em;
 
 		.title {
 			grid-column: 1;
@@ -42,9 +42,13 @@
 		}
 
 		.content {
-			grid-column: 1;
+			grid-column: 1 / span 2;
 			grid-row: 2;
 			padding: 0 calc(6px + 1em);
+
+			@include sm {
+				grid-column: 1;
+			}
 
 			a {
 				display: inline-block;
@@ -62,9 +66,15 @@
 		}
 
 		img {
-			height: 100%;
+			width: 125px;
 			grid-column: 2;
-			grid-row: 1 / span 2;
+			grid-row: 1;
+
+			@include sm {
+				width: 200px;
+				grid-column: 2;
+				grid-row: 1 / span 2;
+			}
 		}
 	}
 }

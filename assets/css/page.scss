@@ -8,8 +8,12 @@ main {
 		padding: 1.5em 1em;
 
 		@include sm {
-			width: 50%;
+			width: 75%;
 			padding: 2em 0;
+		}
+
+		@include lg {
+			width: 60%;
 		}
 
 		@include xl {
