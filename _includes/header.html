@@ -1,6 +1,6 @@
 <header>
 	<div class="title">
-		<h1><a href="{% link index.md %}"><i>{{ site.icon }}</i> {{ site.first_name }} {{ site.last_name }}</h1>{% if site.job_title %} <h2>{{ site.job_title }}</h2>{% endif %}</a>
+		<h1><a href="{% link index.md %}"><i class="icon">{% if page.icon %}{{ page.icon }}{% else %}{{ site.icon }}{% endif %}</i> {{ site.first_name }} {{ site.last_name }}</h1>{% if site.job_title %} <h2>{{ site.job_title }}</h2>{% endif %}</a>
 	</div>
 
 	<nav>
