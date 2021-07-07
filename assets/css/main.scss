@@ -15,8 +15,8 @@
 	:root {
 		--background-color: #333333;
 		--foreground-color: #efefef;
-		--light-accent-color: rgb(202, 240, 240);
-		--dark-accent-color: #b2d8d8;
+		--light-accent-color: #b2d8d8;
+		--dark-accent-color: rgb(202, 240, 240);
 		--light-accent-background-color: #66b2b2;
 		--dark-accent-background-color: #004c4c;
 	}
@@ -93,7 +93,11 @@ header {
 				margin-left: 1.25em;
 
 				&.active a {
-					color: #66b2b2;
+					color: var(--light-accent-background-color);
+				}
+
+				a:hover {
+					color: var(--light-accent-background-color);
 				}
 			}
 		}
