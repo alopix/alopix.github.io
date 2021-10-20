@@ -2,11 +2,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>{{ site.title }}{% if page.title %} | {{ page.title }}{% endif %}</title>
 
+<link rel="stylesheet" href="{{ '/assets/css/reset.css' | relative_url }}" />
 <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css" />
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/brands.min.css" />
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/solid.min.css" />
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" />
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 {% if layout.custom_css %} {% for stylesheet in layout.custom_css %} {% capture url %}/assets/css/{{ stylesheet }}.css{%
 endcapture %}
 <link rel="stylesheet" href="{{ url | relative_url }}" />
