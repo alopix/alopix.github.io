@@ -19,7 +19,7 @@ social:
     icon: fab fa-github-square
     url: https://github.com/alopix
   - name: LinkedIn
-    icon: fab fa-linkedinin
+    icon: fab fa-linkedin
     url: https://www.linkedin.com/in/dustin-steiner
   - name: Goodreads
     icon: fab fa-goodreads
