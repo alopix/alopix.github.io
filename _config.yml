@@ -3,8 +3,8 @@ icon: 👨‍💻
 description: >-
   Dustin Steiner’s personal website.
 
-url: "dustin.meecolabs.eu"
-baseurl: ""
+url: 'dustin.meecolabs.eu'
+baseurl: ''
 
 first_name: Dustin
 last_name: Steiner
@@ -12,24 +12,21 @@ job_title: Software Engineer
 email: dustin@meecolabs.eu
 
 social:
-  - name: E-Mail
-    icon: fas fa-envelope
-    url: "mailto:dustin@meecolabs.eu"
   - name: Twitter
-    icon: fab fa-twitter
+    icon: fab fa-twitter-square
     url: https://twitter.com/alopix
   - name: GitHub
-    icon: fab fa-github
+    icon: fab fa-github-square
     url: https://github.com/alopix
   - name: LinkedIn
-    icon: fab fa-linkedin-in
+    icon: fab fa-linkedinin
     url: https://www.linkedin.com/in/dustin-steiner
-
-collections:
-  experience:
-  education:
-  projects:
-  books:
+  - name: Goodreads
+    icon: fab fa-goodreads
+    url: https://www.goodreads.com/author/show/18550140.Dustin_Steiner
+  - name: E-Mail
+    icon: fas fa-envelope-square
+    url: 'mailto:dustin@meecolabs.eu'
 
 # Exclude from processing.
 exclude:

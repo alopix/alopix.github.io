@@ -1,30 +1,27 @@
 ---
 layout: default
 custom_css:
-- home
+  - home
 ---
 
-<div class="home">
-	<div class="wrapper">
-		<div class="card">
-			{% avatar alopix size=175 %}
+<div class="background"></div>
 
-			<p class="name">
-				{{ site.first_name }}<br />
-				{{ site.last_name }}
-			</p>
-
-			<p class="job">{{ site.job_title }}</p>
-
-			<ul class="contact">
-				{% for s in site.social %}
-				<li>
-					<a href="{{ s.url }}" title="{{ s.name }}"><i class="{{ s.icon }}"></i></a>
-				</li>
-				{% endfor %}
-			</ul>
-		</div>
-
-		<div class="content">{{ content }}</div>
-	</div>
-</div>
+<main class="content">
+	<h1 class="title">{{ site.first_name }} {{ site.last_name }}</h1>
+	<h2 class="subtitle">{{ site.job_title }}</h2>
+	<p class="tagline">📱 Mobile. 🌍 Web. 📢 Voice.</p>
+	<ul class="description">
+		<li>🇦🇹 Born in Austria.</li>
+		<li>🏴󠁧󠁢󠁳󠁣󠁴󠁿 Living in Scotland.</li>
+		<li>🥾 Hiking on my days off.</li>
+		<li>📚 Book lover &amp; fiction writer.</li>
+		<li>🎶 Classical music lover and singer.</li>
+	</ul>
+	<ul class="links">
+		{% for s in site.social %}
+		<li>
+			<a href="{{ s.url }}" title="{{ s.name }}"><i class="{{ s.icon }}"></i></a>
+		</li>
+		{% endfor %}
+	</ul>
+</main>
