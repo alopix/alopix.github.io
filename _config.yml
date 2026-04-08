@@ -13,8 +13,8 @@ email: dustin@meecolabs.eu
 
 social:
   - name: Twitter
-    icon: fab fa-twitter-square
-    url: https://twitter.com/alopix
+    icon: fab fa-mastodon
+    url: https://mastodon.social/@alopix
   - name: GitHub
     icon: fab fa-github-square
     url: https://github.com/alopix
